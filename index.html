@@ -107,6 +107,35 @@
 
     <div class="container px-4 py-5">Each NFT in this collection is a unique creation, even if it does not appear that way. Artwork may contain images, data, or text that is hidden using Steganographic or Cryptographic techniques. A solution is provided in the form of Unlockable Content that can be revealed only by the owner of the NFT.</div>
     
+    <div class="container px-4 py-5">
+      <h2 class="pb-2 border-bottom">I don't get it...</h2>
+
+      <p>An image is made up of pixels, and each pixel is a color value. Colors are typically represented by three bytes: one for Red, one for Green, and one for Blue.</p>
+
+      <p>Humans are unable to tell the difference between color values that are very close to one another. For example, a Red value of 255 looks identical to 254.</p>
+
+      <div style="background-color: rgba(255,0,0,1.0);width:100px;height:100px;display:inline-block;color:white;text-align: center; padding-top:10px;margin-bottom: 10px;">255<br>1111 1111</div>
+      <div style="background-color: rgba(254,0,0,1.0);width:100px;height:100px;display:inline-block;color:white;text-align: center; padding-top:10px;margin-bottom: 10px;">254<br>1111 1110</div>
+
+      <p>In binary, 255 and 254 differ by their least significant bit (LSB). So, a popular way to hide data and images within an image is to change the LSB of every pixel in order to record the hidden data's bits, and then a human looking at the image would not notice the subtle differences from the original.</p>
+      <p>Since there are three primary colors for each pixel, it is possible to hide something different within each color byte.</p>
+      <p>The Ode to Bitcoin series has text on a background arranged in a 121 x 121 grid. The background for each grid cell has a color, and the foreground text has a different color in which to hide data or images.</p>
+
+      <p>For example, <a href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/105147947531621705606286004709778646015752024381749228547167204434514924273665" target="_blank">Ode to Bitcoin 11</a>
+      contains these hidden images:</p>
+
+      <img src="11.png" />
+      <img src="tesla.png" />
+      <img src="qr-nft.png" />
+
+      <p style="padding-top: 15px">Notice that Elon Musk's photograph is not just black or white, but has shades of gray. This is possible because the image's data is spread across multiple color bytes per pixel, whereas the Tesla logo is black or white because it uses the LSB of only one color byte.</p>
+
+      <p>One last trick is that text or other data can also be stored in the same way. Text just needs to be converted to binary, and then individual bits can be encoded in the LSB of color bytes.</p>
+
+      <img src="11.greenfg.png" style="float: left; margin-right: 15px;"/>
+
+      <p><em>"During the three months ended March 31, 2021, we purchased an aggregate of $1.50 billion in digital assets, comprised solely of bitcoin. In addition, during the three months ended March 31, 2021, we began accepting bitcoin as a payment for sales of certain of our products in specified regions, subject to applicable laws. We account for such non-cash consideration at the time we enter into transactions with our customers in accordance with the non-cash consideration guidance included in the Accounting Standards Codification ("ASC") 606, Revenue from Contracts with Customers, based on the then current quoted market prices of bitcoin."</em></p>
+
 <!-- Default Statcounter code for Rendered Secrets
 https://rendered-secrets.github.io/intro/ -->
 <script type="text/javascript">
